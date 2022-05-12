@@ -8,7 +8,8 @@ pipeline {
         HARBOR_PROJECT = 'mmize-harbor-project'
         DB_IMAGE_NAME = 'db'
     }
-    stages {
+     stages {
+        //TODO: add stages to pipeline
         stage('Application repository') {
             steps {
                 echo "Cloning application repository"
@@ -24,7 +25,8 @@ pipeline {
                     }
                 }
             }
-        }stage('DB changes: true') {
+        }
+        stage('DB changes: true') {
            when {
               environment name: 'BUILD_DB', value: 'true'
            }
