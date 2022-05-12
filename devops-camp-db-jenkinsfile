@@ -7,7 +7,7 @@ pipeline {
         HARBOR_REGISTRY = 'harbor.dev.afsmtddso.com'
         HARBOR_PROJECT = 'mmize-harbor-project'
         DB_IMAGE_NAME = 'db'
-    }//TODO: add environment variables
+    }
     stages {
         stage('Application repository') {
             steps {
